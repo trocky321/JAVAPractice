@@ -2,6 +2,7 @@ package com.jt.collections;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -71,8 +72,9 @@ public class ListExamples extends MyFormatter{
 		System.out.println(a2);	
 	}
 	
+	@Ignore
 	@Test
-	public void linkedArrayList() {
+	public void sortCollection() {
 		
 		List<String> a1 = new ArrayList<>();
 		a1.add("Tom");
@@ -91,4 +93,45 @@ public class ListExamples extends MyFormatter{
 			System.out.println(s);
 		}
 	}
+	
+	@Test
+	public void LinkedListExamples() {
+		//Linked list implements the DeQue Interface
+		
+		Deque<String> a1 = new LinkedList<>();
+		
+		a1.add("Tom");
+		a1.add("Ram");
+		a1.add("Bam");
+		a1.add("Sham");
+		
+		System.out.println(a1);
+		
+		a1.addFirst("addFirst_e");
+		a1.addLast("addLast.e");
+		
+		System.out.println(a1);
+		
+		System.out.println(a1.peekFirst() +"  " + a1.peekLast() );
+		a1.push("Bina");
+		
+		System.out.println(a1);
+		
+		a1.pop();
+		System.out.println(a1);
+		
+		a1.poll();
+		System.out.println(a1);
+		
+		//a1.forEach( e -> System.out.println(e));
+		
+		//Removing all the elements from a queue
+		while(a1.peek() != null) {
+			System.out.println(a1.pop());
+		}
+		
+		System.out.println(a1);
+		
+ 	}
+	
 }

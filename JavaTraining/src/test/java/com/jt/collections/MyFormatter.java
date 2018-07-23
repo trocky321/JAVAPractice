@@ -1,7 +1,5 @@
 package com.jt.collections;
 
-import java.lang.reflect.Method;
-
 import org.junit.After;
 import org.junit.Before;
 
